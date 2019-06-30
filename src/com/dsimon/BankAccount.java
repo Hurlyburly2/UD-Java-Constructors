@@ -1,17 +1,30 @@
 package com.dsimon;
 
 public class BankAccount {
-    private int accountNumber;
+    private String accountNumber;
     private double balance;
     private String customerName;
     private String email;
     private String phoneNumber;
 
-    public int getAccountNumber() {
+    public BankAccount() {
+        this("56789", 2.50, "Default name", "Default address", "Default phone");
+        System.out.println("Empty constructor called");
+    }
+
+    public BankAccount(String accountNumber, double balance, String customerName, String email, String phoneNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAccountNumber() {
         return this.accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 

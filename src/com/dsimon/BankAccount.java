@@ -12,6 +12,10 @@ public class BankAccount {
         System.out.println("Empty constructor called");
     }
 
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this("99999", 100.55, customerName, email, phoneNumber);
+    }
+
     public BankAccount(String accountNumber, double balance, String customerName, String email, String phoneNumber) {
         this.accountNumber = accountNumber;
         this.balance = balance;
